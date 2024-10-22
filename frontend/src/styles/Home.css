@@ -1,0 +1,111 @@
+/* Container for the whole page */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Asegura que el body ocupe toda la altura */
+    font-family: 'Helvetica Neue', sans-serif; /* Tipografía moderna */
+    background-color: #f7f9fc; /* Fondo claro para toda la página */
+}
+
+/* Main container for the layout */
+.home-container {
+    display: flex; /* Usar flexbox para dividir el espacio */
+    height: 100vh; /* Altura completa de la ventana */
+}
+
+/* Styles for the form section */
+.form-container {
+    width: 350px; /* Ancho fijo de 350px */
+    max-width: 90%; /* Ancho máximo del 90% de su contenedor padre */
+    margin: 0; /* Eliminar márgenes superior e inferior */
+    padding: 20px; /* Espaciado interno */
+    border: 1px solid #dcdcdc; /* Borde gris claro */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    display: flex; /* Usar flexbox para el diseño interno */
+    flex-direction: column; /* Alinear los hijos en columna */
+    gap: 15px; /* Espacio entre los elementos hijos */
+    background-color: #f9f9f9; /* Fondo gris suave */
+    height: 100%; /* Ocupar toda la altura disponible */
+}
+
+/* Form title */
+form h2 {
+    color: #333; /* Color oscuro */
+    font-size: 26px; /* Tamaño de fuente aumentado */
+    margin-bottom: 20px;
+}
+
+/* Form labels */
+form label {
+    font-weight: bold;
+    margin-top: 10px;
+    color: #555; /* Color gris para etiquetas */
+}
+
+/* Input and textarea styles */
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px; /* Espaciado más grande */
+    margin: 8px 0 16px;
+    border: 1px solid #a9a9a9; /* Color gris medio */
+    border-radius: 4px; /* Bordes redondeados */
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #6a5acd; /* Color azul oscuro (Slate Blue) */
+    box-shadow: 0 0 5px rgba(106, 90, 205, 0.5); /* Sombra al enfocar */
+}
+
+/* Submit button styles */
+form input[type="submit"] {
+    background-color: #3cb371; /* Color verde medio (Medium Sea Green) */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s; /* Transiciones suaves */
+}
+
+form input[type="submit"]:hover {
+    background-color: #2e8b57; /* Color verde más oscuro (Sea Green) */
+    transform: translateY(-2px); /* Efecto de elevación */
+}
+
+/* Styles for the notes section */
+.notes-container {
+    flex: 1; /* Ocupar la mitad derecha */
+    padding: 30px; /* Espaciado interno */
+    background-color: #f9f9f9; /* Fondo gris suave para las notas */
+    overflow-y: auto; /* Habilitar scroll si es necesario */
+}
+
+/* Notes title */
+.notes-container h2 {
+    color: #333; /* Color oscuro */
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+/* Styles for individual notes */
+.note {
+    background-color: #ffffff; /* Fondo blanco para notas */
+    border-left: 5px solid #3cb371; /* Borde verde medio */
+    margin: 10px 0;
+    padding: 15px; /* Padding aumentado */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para notas */
+}
+
+/* Estilo de mensajes de error */
+.error-message {
+    color: red;
+    margin-top: 10px;
+    font-weight: bold; /* Mensaje de error en negrita */
+}
